@@ -1,0 +1,130 @@
+<mat-sidenav-container>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()" class="menu-icon" *ngIf="isMobile">
+        <mat-icon style="color: #ffffff;">menu</mat-icon>
+      </button>
+      <div class="w-4 pl-2 flex align-items-center" *ngIf="!isMobile">
+          <img style="width: 80px;" src="../../../assets/IDEPROVELI LOGO.png" alt=""
+          class="">
+            <div class="ml-2 font-semibold ">IDEPROVELI</div>
+      </div>
+      <div class="flex flex-row w-8 justify-content-between" *ngIf="!isMobile">
+        <a mat-list-item routerLink="inicio" routerLinkActive="active" class="router-a">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">INICIO</p>
+          </div>
+        </a>
+        <a mat-list-item routerLink="nosotros" routerLinkActive="active" class="router-a">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">NOSOTROS</p>
+          </div>
+        </a>
+
+        <a mat-list-item routerLink="veliconnect" routerLinkActive="active" class="router-a">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">VELICONNECT</p>
+          </div>
+        </a>
+
+        <a mat-list-item routerLink="servicios" routerLinkActive="active" class="router-a">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">SERVICIOS</p>
+          </div>
+        </a>
+
+<!--         <a mat-list-item routerLinkActive="active" [matMenuTriggerFor]="menu" class="router-a">
+          <div style="display: inline-flex; align-items: center; cursor: pointer">
+            <p class="router-name">WALLAOSINT</p>
+            <mat-icon style="color: #ffffff; transform: scale(1.3); margin-bottom: 12px; margin-left: 3px;">
+              arrow_drop_down
+            </mat-icon>
+          </div>
+        </a>
+
+        <mat-menu #menu="matMenu" xPosition="after">
+          <button mat-menu-item style="width: 200px;" routerLink="wallaosint">
+            <span>Sobre WALLAOSINT </span>
+          </button>
+          <button mat-menu-item routerLink="consulta-datos">Consulta de Datos</button>
+        </mat-menu> -->
+
+        <a mat-list-item routerLink="contactanos" routerLinkActive="active" class="router-a">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">CONTACTANOS</p>
+          </div>
+        </a>
+      </div>
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <footer style="font-size: 17px;">
+    <div class="flex justify-content-between py-3 px-1 md:px-5 text-sm md:text-base">
+        <div style="color: #ffffff; margin: 0">
+          ©copyright: IDEPROVELI
+        </div>
+        <div style="color: #ffffff; margin: 0">
+          IDEPROVELI
+        </div>
+      </div>
+    </footer>
+  </mat-sidenav-content>
+  <mat-sidenav #sidenav mode="over" class="sidenav">
+    <mat-nav-list>
+      <div class="flex flex-column">
+        <a mat-list-item routerLink="inicio" routerLinkActive="active" class="router-b">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">INICIO</p>
+          </div>
+        </a>
+        <a mat-list-item routerLink="nosotros" routerLinkActive="active" class="router-b">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">NOSOTROS</p>
+          </div>
+        </a>
+
+        <a mat-list-item routerLink="veliconnect" routerLinkActive="active" class="router-b">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">VELICONNECT</p>
+          </div>
+        </a>
+
+        <a mat-list-item routerLink="servicios" routerLinkActive="active" class="router-b">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">SERVICIOS</p>
+          </div>
+        </a>
+
+<!--         <div class="flex align-items-center" (click)="showMenu()">
+          <p class="router-name" style="padding-left: 16px;">WALLAOSINT </p>
+          <mat-icon style="color: #ffffff; transform: scale(1.5); margin-bottom: 12px; margin-left: 7px;">
+            arrow_drop_down
+          </mat-icon>
+        </div>
+
+        <div *ngIf="isHandset" class="pl-3">
+
+          <a mat-list-item routerLink="wallaosint" routerLinkActive="active" class="router-b">
+            <div style="display: inline-flex; align-items: center">
+              <p class="router-name">Sobre WALLAOSINT</p>
+            </div>
+          </a>
+
+          <a mat-list-item routerLink="consulta-datos" routerLinkActive="active" class="router-b">
+            <div style="display: inline-flex; align-items: center">
+              <p class="router-name">Consulta de Datos</p>
+            </div>
+          </a>
+        </div> -->
+
+        <a mat-list-item routerLink="contactanos" routerLinkActive="active" class="router-b">
+          <div style="display: inline-flex; align-items: center">
+            <p class="router-name">CONTACTANOS</p>
+          </div>
+        </a>
+
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>

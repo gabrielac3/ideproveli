@@ -10,6 +10,11 @@ import { ContactanosComponent } from './components/contactanos/contactanos.compo
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: LayoutComponent,
     children: [
       { path: 'inicio', component: InicioComponent },

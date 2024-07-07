@@ -1,0 +1,23 @@
+
+mat-icon{
+  color:#E19621;
+  transform: scale(1.8);
+}
+
+.whats{
+  color:#E19621 !important;
+  transform: scale(2.5);
+}
+
+
+@media (max-width: 768px) {
+
+  mat-icon{
+    transform: scale(1);
+  }
+
+  .whats{
+    transform: scale(1.5);
+    margin:0 5px
+  }
+}

@@ -11,6 +11,10 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { VeliconnectComponent } from './components/veliconnect/veliconnect.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
+import { SuccessDialogComponent } from './shared/success-dialog/success-dialog.component';
+import { ErrorDialogComponent } from './shared/error-dialog/error-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,11 +24,17 @@ import { ContactanosComponent } from './components/contactanos/contactanos.compo
     NosotrosComponent,
     VeliconnectComponent,
     ServiciosComponent,
-    ContactanosComponent
+    ContactanosComponent,
+    SuccessDialogComponent,
+    ErrorDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
 
     MaterialModule,
     BrowserAnimationsModule,

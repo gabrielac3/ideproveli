@@ -1,1 +1,150 @@
-<p>contactanos works!</p>
+<div>
+  <mat-card class="m-4">
+    <mat-card-header class="flex flex-column  mt-3" style="text-align: center;">
+      <h1 class="text-2xl md:text-6xl font-semibold text-center">Contáctanos</h1>
+      <h2>
+        <span class="mt-4 md:p-4 text-sm md:text-4xl text-center sm:line-height-1 md:line-height-2"
+        >Comunícate con nosotros y nos pondremos en contacto contigo tan pronto como nos sea posible.
+        </span>
+        <br>
+        <span class="mt-4 md:p-4 text-sm md:text-4xl text-center sm:line-height-1 md:line-height-2">
+          <strong>
+            ¡Esperamos tener noticias tuyas!
+          </strong>
+        </span>
+      </h2>
+    </mat-card-header>
+
+    <mat-card-content class="mt-4">
+      <div class="flex flex-column md:flex-row align-items-center">
+        <div class="flex-column w-12 md:w-6 m-4">
+          <div class="flex align-items-center">
+            <mat-icon class="pr-3 md:p-4 font-semibold" style="color:#E19621;">house</mat-icon>
+            <div class="md:ml-3">
+              <div class="mb-2 text-base md:text-xl"><strong> Ubícanos:</strong></div>
+              <span class="mb-2 text-sm md:text-base">Avenida Armando Cambana Nro. 228 2do Piso – Urb. Los Laureles –
+                Chorrillos</span>
+            </div>
+          </div>
+          <div class="flex align-items-center mt-4">
+            <mat-icon class="pr-1 md:pr-3 md:p-4 font-semibold" style="color:#E19621;">email</mat-icon>
+            <div class="md:ml-3">
+              <div class="mb-2 text-base md:text-xl"><strong>Email:</strong></div>
+              <span class="mb-2 text-sm md:text-base">info@wallazulugroup.com</span>
+            </div>
+          </div>
+          <div class="flex align-items-center my-4">
+            <mat-icon class="pr-1 md:pr-3 md:p-4 font-semibold" style="color:#E19621;">phone</mat-icon>
+            <div class="md:ml-3">
+              <div class="mb-2 text-base md:text-xl"><strong> Telefono:</strong></div>
+              <span class="mb-2 text-sm md:text-base">+51 946020067</span>
+            </div>
+          </div>
+          <div class="flex align-items-center my-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="whats pr-1 md:pr-3 md:p-4 font-semibold">
+              <rect width="24" height="24" fill="none" />
+              <path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01" />
+            </svg>
+            <div class="md:ml-3">
+              <div class="mb-2 text-base md:text-xl"><strong> WhatsApp:</strong></div>
+              <span class="mb-2 text-sm md:text-base">+51 946020067</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-12 md:w-6 m-4">
+          <form [formGroup]="contactForm" (ngSubmit)="submitContact(contactForm)">
+            <div class="grid">
+
+              <mat-form-field appearance="outline" class="col-12 md:col-6">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" formControlName="name">
+                <mat-error *ngIf="contactForm.controls['name'].hasError('required')">
+                  Debe ingresar su nombre</mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="col-12 md:col-6">
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Apellidos" formControlName="lastname">
+                <mat-error *ngIf="contactForm.controls['lastname'].hasError('required')">
+                  Debe ingresar su apellido</mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="col-12 md:col-6">
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput placeholder="Correo" formControlName="email">
+                <mat-error *ngIf="contactForm.controls['email'].hasError('required')">
+                  Debe ingresar un correo</mat-error>
+                <mat-error *ngIf="contactForm.controls['email'].hasError('pattern')">
+                  Debe ingresar un correo válido</mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="col-12 md:col-6">
+                <mat-label>Celular</mat-label>
+                <input matInput placeholder="Celular" formControlName="phone" type="number">
+                <mat-error *ngIf="contactForm.controls['phone'].hasError('required')">
+                  Debe ingresar un número de celular</mat-error>
+                <mat-error *ngIf="contactForm.controls['phone'].hasError('pattern')">
+                  Debe ingresar solo números</mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="col-12">
+                <mat-label>Dirección</mat-label>
+                <input matInput placeholder="Dirección" formControlName="address">
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="col-12">
+                <mat-label>Mensaje</mat-label>
+                <textarea matInput placeholder="Mensaje" formControlName="message"></textarea>
+                <mat-error *ngIf="contactForm.controls['message'].hasError('required')">
+                  Debe ingresar un mensaje</mat-error>
+              </mat-form-field>
+
+            </div>
+
+            <div class="mt-3 flex">
+              <button mat-raised-button type="submit"
+                style="border-radius: 5px; background-color:#E19621; color:#ffffff; width: 100%;">
+                <mat-icon>send</mat-icon>
+                ENVIAR
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <div class="flex justify-content-center mt-4">
+
+        <div class="mapouter">
+          <div class="gmap_canvas"><iframe width="1200" height="560" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=2do+Piso+Armando+Cambana+228%2C+Chorrillos+15064&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+              href="https://textcaseconvert.com/"></a><br><a href="https://online-timer.me/"></a><br>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 560px;
+                width: 1200px;
+              }
+            </style><a href="https://www.embedmaps.co">adding google map to website</a>
+            <style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 560px;
+                width: 1200px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+
+<!--       <div class="flex justify-content-center mt-4" *ngIf="isMobile">
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="320" height="560" id="gmap_canvas" src="https://maps.google.com/maps?q=2do+Piso+Armando+Cambana+228%2C+Chorrillos+15064&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://timenowin.net/">online clock</a><br><a href="https://www.analarmclock.com/"></a><br><style>.mapouter{position: relative;text-align: right;height: 560px;width: 320px;}</style><a href="https://www.embedmaps.co">google map for my website</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 560px;width: 320px;}</style></div></div>
+      </div> -->
+    </mat-card-content>
+
+  </mat-card>
+
+</div>

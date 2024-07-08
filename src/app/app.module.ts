@@ -15,6 +15,7 @@ import { SuccessDialogComponent } from './shared/success-dialog/success-dialog.c
 import { ErrorDialogComponent } from './shared/error-dialog/error-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SociosComponent } from './components/socios/socios.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContactanosComponent,
     SuccessDialogComponent,
     ErrorDialogComponent,
+    SociosComponent,
   ],
   imports: [
     BrowserModule,

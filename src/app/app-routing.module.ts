@@ -6,6 +6,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { VeliconnectComponent } from './components/veliconnect/veliconnect.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
+import { SociosComponent } from './components/socios/socios.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'veliconnect', component: VeliconnectComponent },
       { path: 'servicios', component: ServiciosComponent},
       { path: 'contactanos', component: ContactanosComponent },
+      { path: 'socios', component: SociosComponent },
     ],
   },
 ];
